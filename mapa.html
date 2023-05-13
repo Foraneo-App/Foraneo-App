@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Foraneo APP</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body onload="initMap()">
+  <div class="navbar">
+    <div class="navbar-logo">
+      <img src="Logo_BUAP2.png" alt="BUAP Logo">
+    </div>
+    <form id="search-form" class="search-bar">
+      <input type="text" id="search-input" placeholder="Search">
+      <button  type="button"><i class="fas fa-search"></i></button>
+    </form>
+    <div class="navbar-buttons">
+      <button id="alimentos-button" class="navbar-button"> <i class="fas fa-utensils"></i> Food </button>
+      <button id="salud-button" class="navbar-button"><i class="fas fa-medkit"></i> Health </button>
+      <button id="compras-button" class="navbar-button"><i class="fas fa-shopping-cart"></i> Shopping </button>
+    </div>
+    <form action="https://davidhernandezl.github.io/Fapp/legal.html">
+      <button id="info-button" class="info-button"><i class="fas fa-info"></i></button>
+    </form>
+  </div>
+ 
+  <div id="map"></div>
+  
+  <script src="app.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIVV5MaRwIs1ud4JR2BIhwAszG2RQRRgA&libraries=places&callback=initMap"></script>
+  <script src="https://cdn.rawgit.com/googlemaps/js-map-label/gh-pages/src/maplabel.js"></script>
+  <script src="maplabel.js"></script>
+  <script>
+    window.addEventListener("load", function() {
+      if (typeof google === "undefined") {
+        console.log("La API de Google Maps no se ha cargado correctamente");
+      } else {
+        console.log("La API de Google Maps se ha cargado correctamente");
+      }
+    });
+  </script>
+</html>
